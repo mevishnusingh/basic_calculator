@@ -30,4 +30,21 @@ public class MainActivity extends AppCompatActivity {
         toatMSG = "Result: " + result;
         Toast.makeText(getApplicationContext(), toatMSG, Toast.LENGTH_SHORT).show();
     }
+
+    public void onMinusClick(View view) {
+        firstValue = Integer.parseInt(etFirstValue.getText().toString());
+        secondValue = Integer.parseInt(etSecondValue.getText().toString());
+        result = firstValue - secondValue;
+        toatMSG = "Result: " + result;
+        Toast.makeText(getApplicationContext(), toatMSG, Toast.LENGTH_SHORT).show();
+    }
+
+    public void onDivideClick(View view) {
+        firstValue = Integer.parseInt(etFirstValue.getText().toString());
+        secondValue = Integer.parseInt(etSecondValue.getText().toString());
+        result = firstValue / secondValue;
+        toatMSG = "Result: " + result;
+        Toast.makeText(getApplicationContext(), toatMSG, Toast.LENGTH_SHORT).show();
+    }
+
 }
