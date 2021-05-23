@@ -1,18 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="178dp"
+        android:layout_height="191dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        app:srcCompat="@drawable/calculator" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/fistValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Enter First Value"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/secondValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Enter Second Value"
+        android:inputType="number" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="103dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:onClick="onPlusClick"
+            android:text="+"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/teal_200" />
+
+        <Button
+            android:id="@+id/btn_minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:text="-"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/teal_200" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="103dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_divide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:text="/"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/teal_200" />
+
+        <Button
+            android:id="@+id/btn_multiply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:text="*"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/teal_200" />
+    </LinearLayout>
+
+</LinearLayout>
