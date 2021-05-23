@@ -47,4 +47,11 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), toatMSG, Toast.LENGTH_SHORT).show();
     }
 
+    public void onMulitplyClick(View view) {
+        firstValue = Integer.parseInt(etFirstValue.getText().toString());
+        secondValue = Integer.parseInt(etSecondValue.getText().toString());
+        result = firstValue * secondValue;
+        toatMSG = "Result: " + result;
+        Toast.makeText(getApplicationContext(), toatMSG, Toast.LENGTH_SHORT).show();
+    }
 }
